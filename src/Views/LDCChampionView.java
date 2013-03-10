@@ -1075,19 +1075,19 @@ public class LDCChampionView extends JFrame implements ActionListener {
 	public double calculateAbilityPower(){
 		
 		double ap = model.getSelectedChampion().getAp();		
-		int rabCounter = 0;
-		int archangelsCounter = 0;
+		boolean hasRabadon = false;
+		boolean hasArchangels = false;
 		int wotaCounter = 0;
 		
 		for (int i = 0; i < model.getSelectedChampion().getItems().size(); i++){
 			if(model.getSelectedChampion().getItems().get(i).getAp() > 0){
 				ap = ap + model.getSelectedChampion().getItems().get(i).getAp();
 				if(model.getSelectedChampion().getItems().get(i).getName() == "RabadonsDeathcap"){
-					rabCounter++;
+					hasRabadon = true;
 				}
 				
 				if(model.getSelectedChampion().getItems().get(i).getName() == "ArchangelsStaff" || model.getSelectedChampion().getItems().get(i).getName() == "SeraphsEmbrace"){
-					archangelsCounter++;
+					hasArchangels = true;
 				}
 				
 				if(model.getSelectedChampion().getItems().get(i).getName() == "WillOfTheAncients"){
@@ -1098,11 +1098,11 @@ public class LDCChampionView extends JFrame implements ActionListener {
 			}
 		}
 		
-		if(archangelsCounter > 0){
+		if(hasArchangels == true){
 			ap =  ap + ((this.calculateMana() / 100) * 3);
 		}
 		
-		if(rabCounter > 0){			
+		if(hasRabadon == true){			
 			ap = ap + (ap * .3);
 		}		
 		
@@ -1203,20 +1203,20 @@ public class LDCChampionView extends JFrame implements ActionListener {
 						spellVamp = spellVamp - model.getSelectedChampion().getItems().get(i).getSpellVamp();	
 				}
 			
-				else if(model.getSelectedChampion().getItems().get(i).getName() == "HextechRevolver"){
+				if(model.getSelectedChampion().getItems().get(i).getName() == "HextechRevolver"){
 					revolverCounter++;
 					if(revolverCounter > 1)
 						spellVamp = spellVamp - model.getSelectedChampion().getItems().get(i).getSpellVamp();
 					
 				}
 			
-				else if(model.getSelectedChampion().getItems().get(i).getName() == "HextechGunblade"){
+				if(model.getSelectedChampion().getItems().get(i).getName() == "HextechGunblade"){
 					gunbladeCounter++;
 					if(gunbladeCounter > 1)
 						spellVamp = spellVamp - model.getSelectedChampion().getItems().get(i).getSpellVamp();
 				}
 			
-				else if(model.getSelectedChampion().getItems().get(i).getName() == "SpiritOfTheSpectralWraith"){
+				if(model.getSelectedChampion().getItems().get(i).getName() == "SpiritOfTheSpectralWraith"){
 					wraithCounter++;
 					if(wraithCounter > 1)
 						spellVamp = spellVamp - model.getSelectedChampion().getItems().get(i).getSpellVamp();
