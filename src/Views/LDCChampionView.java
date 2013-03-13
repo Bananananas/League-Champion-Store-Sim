@@ -219,7 +219,6 @@ public class LDCChampionView extends JFrame implements ActionListener {
 		add(divided);
 		
 		pack();
-		setToolTips();
 		setSize(1000, 750);
 		
 	}		
@@ -577,225 +576,378 @@ public class LDCChampionView extends JFrame implements ActionListener {
 	 */
 	public void setToolTips(){
 		
-		jbtAbyssalScepter.setToolTipText("<html>" + "2650g" + "<br>" + "Abyssal Scepter" + "<br>" +"+70 Ability Power"+ "<br>" + "+45 Magic Resist" + "<br>" + 
-				"Unique: Reduces the magic resist of nearby enemies by 20." + "<html>");
-		jbtAegisOfTheLegion.setToolTipText("<html>" + "2150g" + "<br>" + "Aegis of the Legion" + "<br>" + "+250 Health"+ "<br>" + "+20 Armor" + "<br>" + "+20 Magic Resistance" + "<br>" + "Unique - Legion: Nearby allies gain +10 Armor, +15 Magic resist, and +10 Health regen per 5 seconds." + "<html>");
-		jbtAmplifyingTome.setToolTipText("<html>" + "435g" + "<br>" + "Amplifying Tome" + "<br>" + "+20 Ability Power"+ "<html>");
+		jbtAbyssalScepter.setToolTipText("<html>" + "2650g" + "<br>" + "Abyssal Scepter" + "<br>" + "+" + model.getItemList().get(0).getAp() + " " + "Ability Power"+ 
+				"<br>" + "+" + model.getItemList().get(0).getMrst() + " " + "Magic Resist" + "<br>" + "Unique: Reduces the magic resist of nearby enemies by 20." + "<html>");
+				
+		jbtAegisOfTheLegion.setToolTipText("<html>" + "2150g" + "<br>" + "Aegis of the Legion" + "<br>" + "+" + 
+				model.getItemList().get(1).getHp() + " Health"+ "<br>" + "+" + model.getItemList().get(1).getArm() + " Armor" + 
+				"<br>" + "+" + model.getItemList().get(1).getMrst() + " Magic Resistance" + "<br>" + "Unique - Legion: Nearby allies" +
+				" gain +10 Armor, +15 Magic resist, and +10 Health regen per 5 seconds." + "<html>");
+						
+		
+		jbtAmplifyingTome.setToolTipText("<html>" + "435g" + "<br>" + "Amplifying Tome" + "<br>" + "+" + model.getItemList().get(2).getAp() 
+				+ " Ability Power"+ "<html>");
+		
 		jbtArchangelsStaff.setToolTipText("<html>" + "2700g" + "<br>" + "Archangel's Staff" + "<br>" +"+250 Mana"+ "<br>" + "+60 Ability Power" + "<br>" + "+10 Mana Regen per 5 seconds" + "<br>" + "Unique Passive - Insight: Gain Ability Power equal to 3% of your maximum mana."+ 
 				"<br>" + "Unique Passive - Mana Charge: Each time you cast a spell or spend mana, you gain 6 maximum mana (3 second cooldown). Bonus caps at +750 mana." + "<html>");
+		
 		jbtAthenesUnholyGrail.setToolTipText("<html>" + "2800g" + "<br>" + "Athene's Unholy Grail" + "<br>" + "+60 Ability Power"+ "<br>" + "+40 Magic Resist" + 
 				"<br>" + "+15 Mana Regeneral per 5" + "<br>" + "Unique: 15% Cooldown Reduction." + "<br>" + "Unique: Restores 12% of your max mana on kill or assist." + "<br>" 
 				+ "Unique Passive - Mana Font: Increases your mana regeneration by 1% per 1% mana you are missing." + "<html>");
+		
 		jbtAtmasImpaler.setToolTipText("<html>" + "2300g" + "<br>"+ "Atma's Impaler" + "<br>" + "+45 Armor"+ "<br>" + "+15% Critical Strike Chance" + "<br>" + "Unique: You gain attack damage equal to 1.5% of your maximum health" + "<html>");
+		
 		jbtAugmentDeath.setToolTipText("<html>" + "1000g" + "<br>" + "Augment Death" + "<br>" + "+45 Ability Power"+ "<br>" + "Passive: +3 Ability Power per level. Death Ray sets fire to enemies, delaing 30% additional magic damage " +
 				"over 4 seconds." + "<html>");
+		
 		jbtAugmentGravity.setToolTipText("<html>" + "1000g" + "<br>" + "Augment Gravity" + "<br>" +"+200 Mana"+ "<br>" + "+10% Cooldown Reduction" + "<br>" + "+5 Mana Regeneration per 5 seconds" + "<br>" + 
 				"Unique: +3 Ability Power per level. Gravity Field has an additional 30% cast range." + "<html>");
+		
 		jbtAugmentPower.setToolTipText("<html>" + "1000g" + "<br>" + "Augment Power" + "<br>" +"+220 Health"+ "<br>" + "+6 Health Regeneration per 5" + "<br>" + 
 				"Unique: +3 Ability Power per level. Power Transfer increases Viktor's movement speed by 30% for 3 seconds." + "<html>");
+		
 		jbtAvariceBlade.setToolTipText("<html>" + "800g" + "<br>"+ "Avarice Blade" + "<br>" +"+10% Critical Strike Chance" + "<br>" +
 				"Unique - Avarice: Gain an additional +2 gold every 10 seconds." + "<br>" +
 				"Unique - Greed: Gain an additional +2 gold every kill." + "<html>");
+		
 		jbtBFSword.setToolTipText("<html>" + "1550g" + "<br>" + "B.F. Sword" + "<br>" +"+45 Attack Damage"+ "<html>");
+		
 		jbtBannerOfCommand.setToolTipText("<html>" + "2400g" + "<br>" + "Banner Of Command" + "<br>" +"+40 Ability Power"+ "<br>" + "+30 Armor" + 
 				"<br>" + "+10% Cooldown Reduction" + "<br>" + "Unique - Valor: Nearby allies gain 10 health regen per 5 seconds and nearby allied minions deal 15% increased damage." + 
 				"<br>" + "Unique - Promote: Transforms a nearby siege minion to a more powerful unit. You gain all the gold this unit earns. 180 second cooldown." + "<html>");
+		
 		jbtBansheesVeil.setToolTipText("<html>" + "2610g" + "<br>" + "Banshee's Veil" + "<br>" + "+400 Health"+ "<br>" + "+300 Mana"  + 
 				"<br>" + "+45 Magic Resistance" + "<br>" + "Unique: Gain a spell shield that blocks the next incoming enemy ability. " +
 						"This shield refreshes if you haven't taken damage from a champion in 25 seconds." + "<html>");
+		
 		jbtBerserkersGreaves.setToolTipText("<html>" + "900g" + "<br>" + "Berserker's Graves" + "<br>"+ "+20% Attack Speed" + "<br>" + "Unique - Enhanced Movement: +45 Movement Speed." + "<html>");
+		
 		jbtBilgewaterCutlass.setToolTipText("<html>" + "1925g" + "<br>" + "Bilgewater Cutlass" + "<br>" +"+40 Attack Damage"+ "<br>" + "+10% Life Steal" + "<br>" + "Unique: Deals 150 magic damage" +
 				" and slows the target enemy champion's movement speed by 30% for 2 seconds. 60 second cooldown. "+ "<html>");
+		
 		jbtBladeOfTheRuinedKing.setToolTipText("<html>" + "2900g" + "<br>" + "Blade of the Ruined King" + "<br>" +"+40 Attack Damage"+ "<br>" + "+10% Life Steal" + "<br>" + "Unique: Your attacks deal 4% of the targets" +
 				"current health in physical damage and heals you for half the amount (120 max vs minions)." + "<br>" + "Unique: Drains target champion, dealing 150 physical damage plus 50% of your " +
 						"Attack Damage and healing you by the same amount. Additionally you steal 30% of their Movement Speed for 2 seconds - 60 second cooldown."+ "<html>");
+		
 		jbtBlastingWand.setToolTipText("<html>" + "860g" + "<br>" + "Blasting Wand" + "<br>"+ "+40 Ability Power" + "<html>");
+		
 		jbtBonetoothNecklace.setToolTipText("<html>" + "800g" + "<br>" + "Bonetooth Necklace" + "<br>" +"+5 Attack Damage"+ "<br>" + "Unique: +2 Attack Damage per level" +
 				"<br>"+ "Rengar collects trophies when killing champions. Kills and assists grant 1 trophy, and 1 trophy is lost on death." + "<br>" + "3 Trophies: +10 Armor Penetration, +5% Cooldown Reduction" 
 				+ "<br>" + "6 Trophies: +25 Movement Speed" + "<br>" + "9 Trophies: Rengar's leap gains 150 bonus range." + "<br>" + "14 Trophies: Thrill of the Hunt's durating is increased to 3 seconds. Additionally Rengar's " +
 						"next ability used after activing Thrill of the Hunt gains 1 Ferocity." +  "<html>");
+		
 		jbtBootsOfMobility.setToolTipText("<html>" + "1000g" + "<br>"+ "Boots of Mobility" + "<br>" + "Unique - Enhanced Movement: +45 Movement Speed. Increases to +105 Movement Speed when out of combat for 5 seconds." + "<html>");
+		
 		jbtBootsOfSpeed.setToolTipText("<html>"  + "350g" + "<br>"+ "Boots of Speed" + "<br>" + "Unique - Enhanced Movement: +25 Movement Speed" + "<html>");
+		
 		jbtBootsOfSwiftness.setToolTipText("<html>" + "1000g" + "<br>"+ "Boots of Swiftness" + "<br>" + "Unique - Enhanced Movement: +60 Movement Speed" + "<br>" + "Unique - Slow Resist: Movement slowing effects are reduced by 25%." +"<html>");
 		jbtBrawlersGloves.setToolTipText("<html>" + "400g" + "<br>" + "Brawlers Gloves" + "<br>" + "+8% Critical Strike Chance"+ "<html>");
+		
 		jbtCatalystTheProtector.setToolTipText("<html>" + "1200g" + "<br>"+ "Catalyst the Protector" + "<br>" + "+200 Health"+ "<br>" + "+300 Mana" + "<br>" + "Unique Passive - Valor's Reward: On leveling up, restores 150 Health and " +
 				"200 Mana over 8 seconds." + "<html>");
+		
 		jbtChainVest.setToolTipText("<html>" + "720g" + "<br>" + "Chain Vest" + "<br>" +"+40 Armor" + "<html>");
+		
 		jbtChaliceOfHarmony.setToolTipText("<html>" + "880g" + "<br>"+ "Chalice of Harmony" + "<br>" + "+25 Magic Resistance"+ "<br>" + "+7 Mana Regeneration per 5 seconds" + 
 				"<br>" + "Unique Passive - Mana Font: Increases your mana regeneration by 1% per 1% mana you are missing." + "<html>");
+		
 		jbtCloakOfAgility.setToolTipText("<html>" + "730g" + "<br>"+ "Cloak of Agility" + "<br>" + "+15% Critical Strike Chance" + "<html>");
+		
 		jbtClothArmor.setToolTipText("<html>" + "300g" + "<br>" + "Cloth Armor" + "<br>" + "+15 Armor" + "<html>");
+		
 		jbtCrystalineFlask.setToolTipText("<html>" + "345g" + "<br>"+ "Crystaline Flask" + "<br>" + "Unique: Starts with 3 charges and refills each time you stop by your shop." + "<br>" + "Active: Consumes a charge to restore 120 health" +
 				"and 60 mana over 12 seconds." + "<html>");
+		
 		jbtDagger.setToolTipText("<html>" + "400g" + "<br>"+ "Dagger" + "<br>" + "+12% Attack Speed"+ "<html>");
+		
 		jbtDeathfireGrasp.setToolTipText("<html>" + "3000g" + "<br>"+ "Deathfire Grasp" + "<br>"+"+100 Ability Power"+ "<br>" + "+15% Cooldown Reduction" + "<br>" + 
 				"Unique: Deals 15% of target champion's maximum health in magic damage and applies the debuff, Doom." +
 				"Doom amplifies all magic damage that champion takes by 20% for 4 seconds. 60 second cooldown." + "<html>");
+		
 		jbtDoransBlade.setToolTipText("<html>"  + "475g" + "<br>"+ "Doran's Blade" + "<br>" + "+80 Health"+ "<br>" + "+10 Attack Damage" + "<br>" + "Passive: Your basic attacks restore 5 health each time they hit an enemy." + "<html>");
+		
 		jbtDoransRing.setToolTipText("<html>" + "475g" + "<br>"+ "Doran's Ring" + "<br>" + "+80 Health"+ "<br>" + "+15 Ability Power" + "<br>" + "+3 Mana Regen per 5 seconds" + "<br>" + "Passive: Restores 5 Mana when you kill an enemy unit." + "<html>");
+		
 		jbtDoransShield.setToolTipText("<html>" + "475g" + "<br>" + "Doran's Shield" + "<br>" + "+100 Health"+ "<br>" + "+5 Armor" + "<br>" + "+5 Health Regen per 5 seconds" + "<br>" + "Unique: Blocks  damage from champion basic attacks." + "<html>");
+		
 		jbtEleisasMiracle.setToolTipText("<html>"+ "1100g" + "<br>" + "Eleisa's Miracle" + "<br>" + "+10 Health Regeneration per 5" + "<br>" + "+15 Mana Regeneration per 5" + "<br>" + "Unique Passive - Aid: " +
 				"Your Summoner Heal, Revive, and Clairvoyance cooldowns are reduced by 20%" + "<br>" + "Unique Passive - Eleisa's Blessing: If you gain 3 levels with this item, you gail all effects permanently and this item is consumed." + "<html>");
+		
 		jbtElixirOfBrilliance.setToolTipText("<html>" + "250g" + "<br>"+ "Elixir of Brilliance" + "<br>" + "On use, grants 25-40 Ability Power, based on champion level, and 10% cooldown reduction for 3 minutes." + "<html>");
+		
 		jbtElixirOfFortitude.setToolTipText("<html>" + "250g" + "<br>" + "Elixir of Fortitude" + "<br>" + "On use, grants 120-235 Health, based on champion level, and 15 Attack Damage for 4 minutes." + "<html>");
+		
 		jbtEmblemOfValor.setToolTipText("<html>" + "650g" + "<br>"+ "Emblem of Valor" + "<br>" + "+20 Armor"+ "<br>" + "Unique - Valor: Nearby allied champions gain +7 health regen per 5 seconds." + "<html>");
+		
 		jbtExecutionersCalling.setToolTipText("<html>" +  "1900g" + "<br>"+ "Executioner's Calling" + "<br>" + "+25 Attack Damage" + "<br>" + "+15% Critical Strike Chance" + "<br>" + "Unique: Your basic attacks inflict Grevous Wounds on enemy champion for 1.5 seconds." + "<html>");
+		
 		jbtFaerieCharm.setToolTipText("<html>" +  "180g" + "<br>"+ "Faerie Charm" + "<br>" + "+3 Mana Regen per 5 seconds" + "<html>");
+		
 		jbtFiendishCodex.setToolTipText("<html>" +  "1000g" + "<br>"+ "Fiendish Codex" + "<br>"+"+30 Ability Power"+ "<br>" + "+6 Mana Regeneration per 5" + "<br>" + 
 				 "Unique: +10% Cooldown Reduction." + "<html>");
+		
 		jbtFrozenHeart.setToolTipText("<html>" +  "3100g" + "<br>"+ "Frozen Heart" + "<br>" + "+90 Armor" + "<br>" + "+400 Mana" + "<br>" + "+20% Cooldown Reduction"+ "<br>" + "Unique: Reduces the attack speed of nearby enemies by 20%." + "<html>");
+		
 		jbtFrozenMallet.setToolTipText("<html>" +  "3300g" + "<br>"+ "Frozen Mallet" + "<br>" + "+700 Health" + "<br>" + "+30 Attack Damage" + "<br>" + "Unique - Icy: Your basic attacks slow your targets  Movement Speed by 40% for 1.5 seconds (30% slow for ranged attacks)." + "<html>");
 		jbtGiantsBelt.setToolTipText("<html>" +  "1000g" + "<br>"+ "Giant's Belt" + "<br>" + "+400 Health" + "<html>");
+		
 		jbtGlacialShroud.setToolTipText("<html>" +  "1500g" + "<br>"+ "Glacial Shroud" + "<br>" + "+40 Armor" + "<br>" + "+300 Mana" + "<br>" + "Unique: +15% Cooldown Reduction" + "<html>");
+		
 		jbtGuardianAngel.setToolTipText("<html>" +  "2600g" + "<br>"+ "Guardian Angel" + "<br>" + "+50 Armor" + "<br>" + "+30 Magic Resistance" + "<br>" + "Unique: Revives your champion upon death restoring 30% of your maximum health and mana. 5 minute cooldown." + "<html>");
+		
 		jbtGuinsoosRageblade.setToolTipText("<html>" +  "2600g" + "<br>"+ "Guinsoo's Rageblade" + "<br>" + "+40 Ability Power" + "<br>" + "+30 Attack Damage" + "<br>" + "Passive: Your basic attacks or spellgasts grant you 4% Attack Speed and 4 Ability Power for 8 seconds. This bonus stacks up to 8 times" +
 				"<br>" + "Unique Passive: Falling below 50% Health grants you 20% Attack Speed, 10% Life Steal, and 10% Spell Vamp until you exit combat. 30 second cooldown." + "<html>");
+		
 		jbtHauntingGuise.setToolTipText("<html>" +  "1485g" + "<br>"+ "Haunting Guise" + "<br>" + "+200 Health"+ "<br>" + "+25 Ability Power" + "<br>" + "Unique - Eyes of Pain: +15 Magic Penetration." + "<html>");
+		
 		jbtHealthPotion.setToolTipText("<html>" +  "35g" + "<br>"+ "Health Potion" + "<br>" + "Restores 150 health over 15 seconds" + "<html>");
+		
 		jbtHexdrinker.setToolTipText("<html>" +  "1350g" + "<br>"+ "Hexdrinker" + "<br>" + "+25 Attack Damage" + "<br>" + "+25 Magic Resistance" + "<br>" + "Unique - Lifeline: If you would take magic damage that would leave you at less than 30% of your" +
 				"maximum health, you gain a shield which absorbs up to 250 magic damage for 5 seconds. 60 second cooldown." + "<html>");
+		
 		jbtHextechGunblade.setToolTipText("<html>" +  "3400g" + "<br>"+ "Hextech Gunblade" + "<br>" + "+45 Attack Damage" + "<br>" + "+65 Ability Power" + "<br>" + "+10% Life Steal" + "<br>"+ "Unique: +20% Spell Vamp" +
 				"<br>" + "Unique - Reload: Your basic attacks and single target spells against champions reduce the cooldown of this item by 3 seconds" + "<br>" + "Unique: Deals 150 + 40% of your" +
 						"Ability Power as magic damage and slows the target champion's movement speed by 40% for 2 seconds. 60 second cooldown." + "<html>");
+		
 		jbtHextechRevolver.setToolTipText("<html>" +  "1200g" + "<br>"+ "Hextech Revolver" + "<br>" + "+40 Ability Power" + "<br>" + "Unique: +12% Spell Vamp" + "<html>");
+		
 		jbtHuntersMachete.setToolTipText("<html>" +  "300g" + "<br>"+ "Hunter's Machete" + "<br>" + "Unique Passive - Butcher: Damage dealt to monsters increased by 10%." + "<br>" + "Unique Passive - Rend: Your basic attacks" +
 				"deal 10 bonus true damage to monsters." + "<html>");
+		
 		jbtIcebornGauntlet.setToolTipText("<html>" +  "3400g" + "<br>"+ "Iceborn Gauntlet" + "<br>" + "+40 Ability Power" + "<br>" + "+500 Mana" + "<br>" + "+60 Armor" + "<br>" + "+15% Cooldown Reduction" + "<br>" + "Unique Passive - Spellblade: " +
 				"After using an ability, your next basic attack deals bonus physical damage equtal to 125% of your base attack damage to surroudning enemies and creates a field for 2 seconds that slows enemies" +
 				"inside by 30% (2 second cooldown)." + "<html>");
+		
 		jbtInfinityEdge.setToolTipText("<html>" + "3800g" + "<br>"+ "Infinity Edge" + "<br>" + "+70 Attack Damage"+ "<br>" + "+25% Critical Strike Chance" + "<br>" + "Unique: +50% Critical Strike Damage." + "<html>");
+		
 		jbtIonianBootsOfLucidity.setToolTipText("<html>" +  "1050g" + "<br>"+ "Ionian Boots of Lucidity" + "<br>" + "Unique: +15% Cooldown Reduction"+ "<br>" + "Unique - Enhanced Movement: +45 Movement Speed" + "<html>");
+		
 		jbtKagesLuckyPick.setToolTipText("<html>" +  "765g" + "<br>"+ "Kage's Lucky Pick" + "<br>" + "+25 Ability Power"+ "<br>" + "Unique - Lucky Shadow: Gain +4 additional gold ever 10 seconds" + "<html>");
+		
 		jbtKindlegem.setToolTipText("<html>" +  "850g" + "<br>"+ "Kindlegem" + "<br>" + "+200 Health"+ "<br>" + "Unique: +10% Cooldown Reduction" + "<html>");
+		
 		jbtLastWhisper.setToolTipText("<html>" +  "2300g" + "<br>"+ "Last Whisper" + "<br>" + "+40 Attack Damage"+ "<br>" + "Unique: +35% Armor Penetration." + "<html>");
+		
 		jbtLiandrysTorment.setToolTipText("<html>" +  "2900g" + "<br>"+ "Liandry's Torment" + "<br>" + "+300 Health"+ "<br>" + "+60 Ability Power" + "<br>" + "Unique Passive - Eyes of Pain: +15 Magic Penetration" + "<br>" + 
 				"Unique Passive: Dealing spell damage burns enemies for 5% of their current health as magic damage over 3 seconds. If their movement is imparied, " +
 				"they take double damage from this effect. Multitarget or periodic effects deals 2.5% over 1.5 seconds. 300 max damage vs. monsters" + "<html>");
-		jbtLichBane.setToolTipText("<html>" +  "3000g" + "<br>"+ "Lich Bane" + "<br>" + "+80 Ability Power"+ "<br>" + "+250 Mana" + "<br>" + "+5% Movement Speed" + "<br>" + "Unique – Spellblade: After using an ability, your next basic attack deals bonus magic damage equal to 50 + 75% of your ability power. 2 second cooldown." + "<html>");
+		
+		jbtLichBane.setToolTipText("<html>" +  "3000g" + "<br>"+ "Lich Bane" + "<br>" + "+80 Ability Power"+ "<br>" + "+250 Mana" + "<br>" + "+5% Movement Speed" + "<br>" + "Unique – Spellblade: After using an ability," +
+				" your next basic attack deals bonus magic damage equal to 50 + 75% of your ability power. 2 second cooldown." + "<html>");
+		
 		jbtLocketOfTheIronSolari.setToolTipText("<html>" +  "2000g" + "<br>"+ "Locket of the Iron Solari" + "<br>" + "+425 Health"+ "<br>" + "+35 Armor"  + "<br>" + "+10% Cooldown Reduction" + "<br>" + "+10 Health Regeneration per 5" + "<br>"
 				+ "Unique: Shield yourself and nearby allied champions for 5 seconds, absobing up to 50 (+10 per level) damage. 60 second cooldown" + "<html>");
+		
 		jbtLongSword.setToolTipText("<html>" +  "400g" + "<br>"+ "Long Sword" + "<br>" + "+10 Attack Damage" + "<html>");
+		
 		jbtMadredsRazor.setToolTipText("<html>" +  "700g" + "<br>"+ "Madred's Razors" + "<br>" + "+25 Armor" + "<br>" + "Unique - Maim: Your basic attacks against minions and monsters have a 25% chance to deal 300 bonus magic damage." +
 				"<br>" + "Unique - Rend: Basic attacks deal 10 bonus true damage to monsters." + "<html>");
+		
 		jbtMalady.setToolTipText("<html>" +  "2035g" + "<br>"+ "Malady" + "<br>" + "+25 Ability Power" + "<br>" + "+45% Attack Speed" +
 				"<br>" + "Unique: Your basic attacks deal 15 + 10% AP bonus magic damage." + "<br>" + "Unique: Your basic attacks reduce enemy magic resistance by 4 for 8 seconds (maximum 7 stacks)." + "<html>");
+		
 		jbtManaManipulator.setToolTipText("<html>" +  "400g" + "<br>"+ "Mana Manipulator" + "<br>" + "Unique Aura - Mana Warp: Nearby allied champions gain +6 mana regeneration per 5 seconds." + "<html>");
+		
 		jbtManaPotion.setToolTipText("<html>" +  "35g" + "<br>"+ "Mana Potion" + "<br>" + "Restores 100 mana over 15 seconds." + "<html>");		
+		
 		jbtManamune.setToolTipText("<html>" +  "2100g" + "<br>"+ "Manamune" + "<br>" + "+250 Mana"+ "<br>" + "+20 Attack Damage" + "<br>" + "+7 Mana Regen per 5 seconds." + "<br>" + 
-				"Unique Passive - Awe: Gain attack damage equal to 2% of your maximum mana." + "<br>" + "Unique Passive - Mana Charge: Each time you attack, cast a spell or spend mana, your maximum mana increases by 4 (3 second cooldown). Bonus caps at +750 bonus mana." + "<html>");
+				"Unique Passive - Awe: Gain attack damage equal to 2% of your maximum mana." + "<br>" + "Unique Passive - Mana Charge: Each time you attack, cast a spell or spend mana, " +
+						"your maximum mana increases by 4 (3 second cooldown). Bonus caps at +750 bonus mana." + "<html>");
+		
 		jbtMawOfMalmortius.setToolTipText("<html>" +  "3200g" + "<br>"+ "Maw of Malmortius" + "<br>" + "+55 Attack Damage"+ "<br>" + "+36 Magic Resistance" + "<br>" + "Gain +1 attack damage for every 2.5% health missing." +
 				"<br>" + "Unique - Lifeline: If you would take magic damage which would leave you at less than 30% of your maximum health, you first gain a shield which absorbs up to 400 magic damage for 5 seconds. 60 second cooldown." + "<html>");
+		
 		jbtMejaisSoulstealer.setToolTipText("<html>" +  "1235g" + "<br>"+ "Mejai's Soulstealer" + "<br>" + "+20 Ability Power"+ "<br>" + "Unique: Your champion gains 8 Ability Power per stack, receiving 2 stacks for a kill or 1 stack for an assist." +
 				"This effect can stack 20 times; you lose a third of your stacks if you die. At 20 stacks, your champion gains 15% cooldown reduction" + "<html>");
+		
 		jbtMercurialScimitar.setToolTipText("<html>" +  "3810g" + "<br>"+ "Mercurial Scimitar" + "<br>" + "+60 Attack Damage"+ "<br>" + "+45 Magic Resist" + "<br>" + "Unique Active - Quicksilver: Removes all debuffs from your " +
 				"champion. Melee champions also gain +50% movement speed for 1 second. 90 second cooldown." + "<html>");
+		
 		jbtMercurysTreads.setToolTipText("<html>" +  "1200g" + "<br>"+ "Mercury's Treads" + "<br>" + "+25 Magic Resistance" + "<br>" + "Unique – Enhanced Movement: +45 movement speed" +
 				"<br>" + "Unique – Tenacity: The duration of stuns, slows, taunts, fears, silences, blinds and immobilizes are reduced by 35%." + "<html>");
+		
 		jbtMikaelsCrucibal.setToolTipText("<html>" +  "2200g" + "<br>"+ "Mikael's Crucible" + "<br>" + "+300 Mana" + "<br>" + "+40 Magic Resistance" +
 				"<br>" + "+9 Mana Regeneration per 5 seconds" + "<br>" + "Unique Passive - Mana Font: Increases your Mana Regen by 1% per 1% Mana you are missing" + "<br>" + "Unique Active: Removes all stuns, roots, taunts, " +
 						"fears, silences and slows on an allied champion and heals them for 150 + 15% of their missing health. (180 second cooldown)"+ "<html>");
+		
 		jbtMorellonomicon.setToolTipText("<html>" +  "2200g" + "<br>"+ "Morellonomicon" + "<br>" + "+75 Ability Power" + "<br>" + "+12 Mana Regeneration per 5 seconds" + "<br>" + "+20% Cooldown Reduction" + "<br>" +
 						"Unique: Dealing magic damage to an enemy champion below 40% health inflicts Grievous Wounds to them for 4 seconds." + "<html>");
+		
 		jbtMuramana.setToolTipText("<html>" +  "2100g" + "<br>"+ "Muramana" + "<br>" + "+1000 Mana" + "<br>" + "+20 Attack Damage" + "<br>" + "+7 Mana Regeneration per 5 seconds" + "<br>" + "Unique Passive - Awe: Gain attack damage equal to 2% of your maximum mana." +
 						"<br>" + "Toggle: Dealing damage with single target, non-periodic spells or your basic attacks will consume 3% of your current mana to deal 6% of your current mana as magic damage." + "<html>");
+		
 		jbtNashorsTooth.setToolTipText("<html>" +  "2500g" + "<br>"+ "Nashor's Tooth" + "<br>" + "+65 Ability Power" + "<br>" + "+50% Attack Speed" + "<br>" + "+10 Mana Regeneration per 5 seconds" + "<br>" + "Unique: +20% cooldown reduction" + "<html>");
+		
 		jbtNeedlesslyLargeRod.setToolTipText("<html>" +  "1600g" + "<br>"+ "Needlessly Large Rod" + "<br>" + "+80 Ability Power" + "<html>");
+		
 		jbtNegatronCloak.setToolTipText("<html>" +  "810g" + "<br>"+ "Negatron Cloak" + "<br>" + "+45 Magic Resistance" + "<html>");
+		
 		jbtNinjaTabi.setToolTipText("<html>" +  "1000g" + "<br>"+ "Ninja Tabi" + "<br>" + "+25 Armor" + "<br>" + "Unique – Enhanced Movement: +45 movement speed." + "<br>" + "Unique: Blocks 10% of the damage from basic attacks." + "<html>");
+		
 		jbtNullMagicMantle.setToolTipText("<html>" +  "400g" + "<br>"+ "Null-Magic Mantle" + "<br>" + "+20 Magic Resistance" + "<html>");
-		jbtOhmwrecker.setToolTipText("<html>" +  "2850g" + "<br>"+ "Ohmwrecker" + "<br>" + "+350 Health" + "<br>" + "+300 Mana" + "<br>" + "+55 Armor" + "<br>" + "Unique Active: Prevents the closest enemy tower from attacking for 2.5 seconds (120 second cooldown). This effect cannot be used against the same tower more than once every 7.5 seconds." + "<html>");
+		
+		jbtOhmwrecker.setToolTipText("<html>" +  "2850g" + "<br>"+ "Ohmwrecker" + "<br>" + "+350 Health" + "<br>" + "+300 Mana" + "<br>" + "+55 Armor" + "<br>" + "Unique Active: Prevents the closest " +
+				"enemy tower from attacking for 2.5 seconds (120 second cooldown). This effect cannot be used against the same tower more than once every 7.5 seconds." + "<html>");
+		
 		jbtOraclesElixir.setToolTipText("<html>" +  "400g" + "<br>"+ "Oracle's Elixer" + "<br>" + "Grants your champion stealth detection for 5 minutes or until they die." + "<html>");
+		
 		jbtPhage.setToolTipText("<html>" + "1465g" +  "<br>" + "Phage" + "<br>" + "+200 Health"+ "<br>" + "+20 Attack Damage" + "<br>" + "Unique - Icy: Your basic attacks have a 25% chance to slow your" +
 				"target's movement speed by 30% for 2 seconds (20% slow for ranged attacks)." + "<html>");
+		
 		jbtPhantomDancer.setToolTipText("<html>" +  "2800g" + "<br>"+ "Phantom Dancer" + "<br>" + "+50% Attack Speed"+ "<br>" + "+30% Critical Strike Chance"  + "<br>" + "+5% Movement Speed" + "<br>" 
 				+ "Unique: Your champion ignores unti collision." + "<html>");
+		
 		jbtPhilsophersStone.setToolTipText("<html>" +  "700g" + "<br>"+ "Philsopher's Stone" + "<br>" + "+7 Health Regeneration per 5 seconds"+ "<br>" + "+9 Mana Regeneration per 5 seconds"  + "<br>"  
 				+ "Unique – Transmute: Gain +5 additional gold every 10 seconds.");
+		
 		jbtPickaxe.setToolTipText("<html>" +  "875g" + "<br>"+ "Pickaxe" + "<br>" + "+25 Attack Damage" + "<html>");
+		
 		jbtQuicksilverSash.setToolTipText("<html>" +  "1660g" + "<br>"+ "Quicksilver Sash" + "<br>" + "+45 Magic Resist" + "<br>" + "Unique - Quicksilver: Removes all debuffs from your champion. 90 second cooldown." + "<html>");
+		
 		jbtRabadonsDeathcap.setToolTipText("<html>" +  "3200g" + "<br>"+ "Rabadon's Deathcap" + "<br>" + "+120 Ability Power"+ "<br>" + "Unique: +25% Ability Power" + "<html>");
+		
 		jbtRanduinsOmen.setToolTipText("<html>" +  "3100g" + "<br>"+ "Randuin's Omen" + "<br>" + "+500 Health"+ "<br>" + "+70 Armor" + "<br>" + "Unique Passive – Cold Steel: If you are hit by a basic attack, you slow the attacker's " +
-				"attack speed by 20% and their movement speed by 10% for 1.5 seconds." + "<br>" + "Unique Active: Slows the movement speed of nearby enemy units by 35% for 2 seconds + 1 second for every 100 armor and magic resistance you have. 60 second cooldown." + "<html>");
+				"attack speed by 20% and their movement speed by 10% for 1.5 seconds." + "<br>" + "Unique Active: Slows the movement speed of nearby enemy units by 35% for 2 seconds +" +
+						" 1 second for every 100 armor and magic resistance you have. 60 second cooldown." + "<html>");
+		
 		jbtRavenousHydra.setToolTipText("<html>" +  "3500g" + "<br>"+ "Ravenous Hydra" + "<br>" + "+75 Attack Damage"+ "<br>" + "+15 Health Regen per 5" + "<br>" + "+10% Life Steal"+ "<br>" + "Unique - Cleave (Melee Only): Your attacks deal physical " +
 				"damage up to 60% of your Attack Damage to units around your target, decaying to 20% near the edge." + "<br>" + "Unique - Crescent (Melee Only): Your attacks deal physical damage" +
 				" up to 100% of your Attack Damage to units around your target, decaying to 60% near the edge. (10 second cooldown)" + "<html>");
+		
 		jbtRecurveBow.setToolTipText("<html>" +  "950g" + "<br>"+ "Recurve Bow" + "<br>" + "+30% Attack Speed" + "<html>");
+		
 		jbtRejuvenationBead.setToolTipText("<html>" +  "180g"  + "<br>"+ "Rejuvenation Bead" + "<br>" + "+5 Health Regeneration per 5 seconds" + "<html>");
+		
 		jbtRodOfAges.setToolTipText("<html>" +  "2800g" + "<br>"+ "Rod of Ages" + "<br>" + "+450 Health" + "<br>" + "+450 Mana" + "<br>" + "+60 Ability Power" + "<br>" + "Passive: This item gains 20 health, 20 mana and 2 ability power every minute, up to 10 times."
 				+ "<br>" + "Unique Passive – Valor's Reward: On leveling up, restores 150 health and 200 mana over 8 seconds." + "<html>");
+		
 		jbtRubyCrystal.setToolTipText("<html>" +  "475g" + "<br>"+ "Ruby Crystal" + "<br>" + "+180 Health" + "<html>");
+		
 		jbtRubySightstone.setToolTipText("<html>" +  "1300g" + "<br>"+ "Ruby Sightstone" + "<br>" + "+300 Health" + "<br>" + "Unique Passive: Ward Refresh - Starts with 5 charges and refills each time you visit the shop." 
-				+ "<br>" + "Unique Active: Ghost Ward - Consumes a charge to place an invisible Ghost Ward that reveals the surrounding area for 3 minutes. You may have a maximum of 3 wards placed from this item at once. 1 second cooldown." + "<html>");
+				+ "<br>" + "Unique Active: Ghost Ward - Consumes a charge to place an invisible Ghost Ward that reveals the surrounding area for 3 minutes. " +
+						"You may have a maximum of 3 wards placed from this item at once. 1 second cooldown." + "<html>");
+		
 		jbtRunaansHurricane.setToolTipText("<html>" +  "2750g" + "<br>"+ "Runaan's Hurricane" + "<br>" + "+70% Attack Speed"+ "<br>" + "Unique (Ranged only): Your basic attacks fire minor bolts at 2 nearby targets, each dealing 10 + 50% " +
 				"of your attack damage and applying on-hit effects." + "<html>");
+		
 		jbtRunicBulwark.setToolTipText("<html>" +  "3200g" + "<br>"+ "Runic Bulwark" + "<br>" + "+400 Health"+ "<br>" + "+20 Armor" +  
 				"<br>" + "+30 Magic Resistance" + "<br>" + "Unique - Legion: Nearby allies gain +10 Armor, +30 Magic Resist, and +10 Health regen per 5 seconds." + "<html>");
-		jbtRylaisCrystalScepter.setToolTipText("<html>" + "2900g" + "<br>" + "Rylai's Crystal Scepterl" + "<br>" + "+80 Ability Power" + "<br>" + "+500 Health" + "<br>" + "Unique: Your spell damage will slow the target by 35% for 1.5 seconds (15% for multi-target spells, damage-over-time spells and spells with a cooldown time below 3 seconds)." + "<html>");
+		
+		jbtRylaisCrystalScepter.setToolTipText("<html>" + "2900g" + "<br>" + "Rylai's Crystal Scepterl" + "<br>" + "+80 Ability Power" + "<br>" + "+500 Health" + "<br>" + 
+				"Unique: Your spell damage will slow the target by 35% for 1.5 seconds (15% for multi-target spells, damage-over-time spells and spells with a cooldown time below 3 seconds)." + "<html>");
+		
 		jbtSapphireCrystal.setToolTipText("<html>" +  "400g" + "<br>"+ "Sapphire Crystal" + "<br>" + "+200 Mana" + "<html>");
+		
 		jbtSeraphsEmbrace.setToolTipText("<html>" +  "2710g" + "<br>"+ "Seraph's Embrace" + "<br>" + "+1000 Mana"+ "<br>" + "+60 Ability Power" + "<br>" + "+10 Mana Regeneration per 5" + "<br>" + "Unique Passive - Insight: Gain ability power equal to 3% of your maximum mana." 
 				+ "<br>" + "Unique Active - Mana Shield: Drains 25% of your current mana to shield yourself for an equal amount for 3 seconds (120 second cooldown)." + "<html>");
+		
 		jbtShardOfTrueIce.setToolTipText("<html>" +  "1700g" + "<br>"+ "Shard of True Ice" + "<br>" + "+45 Ability Power"+ "<br>" + "Unique Aura: Mana Warp - Nearby allied champions gain 6 mana regen per 5 seconds." +
-				"<br>" + "Unique Passive: Lucky Shadow - Gain an additional 4 gold every 10 seconds." + "<br>" + "Unique Active: Surrounds an ally with a blizzard for 4 seconds that slows nearby enemy movement speed by 30%. 60 second cooldown." + "<html>");
+				"<br>" + "Unique Passive: Lucky Shadow - Gain an additional 4 gold every 10 seconds."
+				+ "<br>" + "Unique Active: Surrounds an ally with a blizzard for 4 seconds that slows nearby enemy movement speed by 30%. 60 second cooldown." + "<html>");
+		
 		jbtSheen.setToolTipText("<html>" +  "1260g" + "<br>"+ "Sheen" + "<br>" + "+25 Ability Power"+ "<br>" + "+200 Mana" + "<br>" + "Unique Passive - SpellBlade: On cast, your next standard attack deals additional physical " +
 				"damage equal to 100% of your base attack damage. (2 second cooldown)." + "<html>");
+		
 		jbtShurelyasReverie.setToolTipText("<html>" +  "2100g" + "<br>"+ "Shurelya's Reverie" + "<br>" + "+250 Health"+ "<br>" + "+10 Health Regeneration per 5 seconds" + "<br>" + "+10 Mana Regeneration" + "<br>" 
 				+ "Unique: +10% cooldown reduction" + "<br>" + "Unique: Nearby champions gain 40% movement speed for 3 seconds (60 second cooldown)." + "<html>");
+		
 		jbtSightward.setToolTipText("<html>" +  "75g" + "<br>"+ "Sight Ward" + "<br>" + "Places an invisible ward with 1100 range. Lasts 3 minutes." + "<html>");
-		jbtSightstone.setToolTipText("<html>" +  "700g" + "<br>"+ "Sightstone" + "<br>" + "+100 Health" + "<br>" + "Unique - Ward Refresh: Starts with 4 charges and refill each time you return to the shop." + "<br>" + "Unique - Ghost Ward: Consumes a charge to play a Ghost Ward. you may have a maximum of 2 wards from this item at once."+  "<html>");
+		
+		jbtSightstone.setToolTipText("<html>" +  "700g" + "<br>"+ "Sightstone" + "<br>" + "+100 Health" + "<br>" + "Unique - Ward Refresh: Starts with 4 charges and refill each time you return to the shop."
+				+ "<br>" + "Unique - Ghost Ward: Consumes a charge to play a Ghost Ward. you may have a maximum of 2 wards from this item at once."+  "<html>");
+		
 		jbtSorcerersShoes.setToolTipText("<html>" +  "1100g" + "<br>"+ "Sorcerer's Shoes" + "<br>" + "+15 Magic Penetration" + "<br>" + "Unique – Enhanced Movement: +45 movement speed." + "<html>");
+		
 		jbtSpiritOfTheAncientGolem.setToolTipText("<html>" +  "2400g" + "<br>"+ "Spirit of the Ancient Golem" + "<br>" + "+500 Health" + "<br>" + "+30 Armor" + "<br>" + "+14 Health Regeneration per 5 seconds" + "<br>" + "+7 Mana Regeneration per 5 seconds"
-		+ "<br>" + "Unique Passive - Butcher: Damage dealt to neutral monsters increased by 25%." + "<br>" + "Unique Passive - Tenacity: The duration of stuns, slows, taunts, fears, silences, blinds and immobilizes are reduced by 35%." + "<html>");
+		+ "<br>" + "Unique Passive - Butcher: Damage dealt to neutral monsters increased by 25%." + "<br>" + "Unique Passive - " +
+				"Tenacity: The duration of stuns, slows, taunts, fears, silences, blinds and immobilizes are reduced by 35%." + "<html>");
+		
 		jbtSpiritOfTheElderLizard.setToolTipText("<html>" +  "2400g" + "<br>"+ "Spirit of the Elder Lizard" + "<br>" + "+50 Attack Damage" + "<br>" + "+10% Cooldown Reduction" + "<br>" + "+14 Health Regeneration per 5 seconds" + "<br>" + "+7 Mana Regeneration per 5 seconds"
-		+ "<br>" + "Unique Passive - Butcher: Damage dealt to neutral monsters increased by 25%." + "<br>" + "Unique Passive - Incinerate: Basic attacks and damaging abilities (excluding damage over time) burn the target for 15-66 (based on level) true damage over 3 seconds." + "<html>");
+		+ "<br>" + "Unique Passive - Butcher: Damage dealt to neutral monsters increased by 25%." + "<br>" + "Unique Passive - Incinerate: Basic attacks and damaging abilities" +
+				" (excluding damage over time) burn the target for 15-66 (based on level) true damage over 3 seconds." + "<html>");
+		
 		jbtSpiritOfTheSpectralWraith.setToolTipText("<html>" +  "2400g" + "<br>"+ "Spirit of the Spectral Wraith" + "<br>" + "+50 Ability Power" + "<br>" + "+30 Armor" + "<br>" + "+10 Mana Regneration per 5 seconds" + "<br>" + "+10 Cooldown Reduction"
 				+ "<br>" + "Unique Passive: +20% spell vamp" + "<br>" + "Unique Passive - Butcher: Damage dealt to neutral monsters increased by 25%." + "<html>");
+		
 		jbtSpiritStone.setToolTipText("<html>" +  "800g" + "<br>"+ "Spirit Stone" + "<br>" + "+50 Attack Damage" + "<br>" + "+14 Health Regeneration per 5 seconds" + "<br>" + "+7 Mana Regeneration per 5 seconds"
 				+ "<br>" + "Unique Passive - Butcher: Damage dealt to neutral monsters increased by 20%." + "<br>" + "Unique Passive - Rend: Your basic attacks against monsters deal bonus 10 true damage." + "<html>");
+		
 		jbtSpiritVisage.setToolTipText("<html>" +  "2200g" + "<br>"+ "Sprit Visage" + "<br>" + "+200 Health"+ "<br>" + "+50 Magic Resistance" + "<br>" + "+15% Cooldown Reduction" + "<br>" 
 				+ "Unique: Increases your healing, regeneration and drain effects on yourself by 20%." + "<html>");
+		
 		jbtStatikkShiv.setToolTipText("<html>" +  "2500g" + "<br>"+ "Statikk Shiv" + "<br>" + "+40 Attack Speed"+ "<br>" + "+20% Critical Strike Chance" + "<br>" + "+6% Movement Speed" + "<br>" +
 				"Unique Passive: Move and attack builds Static Charges, at 100 charages, your next attack expends the charges to deal 100 magic" +
 				" damage to up to 4 targets. This damage can critically strike" + "<html>");
+		
 		jbtStinger.setToolTipText("<html>" +  "1250g" + "<br>"+ "Stinger" + "<br>" + "+40% Attack Speed"+ "<br>" + "Unique: +10% Cooldown Reduction" + "<html>");
+		
 		jbtSunfireCape.setToolTipText("<html>" +  "2500g" + "<br>"+ "Sunfire Cape" + "<br>" + "+45 Armor"+ "<br>" + "+450 Health" + "<br>" + "Unique: Deals 40 magic damage per second to nearby enemies." + "<html>");
+		
 		jbtSwordOfTheDivine.setToolTipText("<html>" +  "2200g" + "<br>"+ "Sword of the Divine" + "<br>" + "+45% Attack Speed"+ "<br>" + "Passive: This item does not grant any attack speed while on cooldown. Champion kills reduce the current cooldown by 50%" +
 				"<br>" + "Active: You gain 100% attack speed and 100% critical strike for 3 seconds or 3 critical strikes - 60 second cooldown." + "<html>");
+		
 		jbtSwordOfTheOccult.setToolTipText("<html>" +  "1200g" + "<br>"+ "Sword of the Occult" + "<br>" + "+10 Attack Damage"+ "<br>" + "Unique: Your champion gains +5 damage per stack, receiving 2 stacks for a kill or 1 stack for an assist. This effect can stack 20 times; " +
 				"you lose a third of your stacks if you die. At 20 stacks, your champion gains +15% movement speed." + "<html>");
-		jbtTearOfTheGoddess.setToolTipText("<html>" +  "700g" + "<br>"+ "Tear of the Goddess" + "<br>" + "+250 Mana"+ "<br>" + "+7 Mana Regeneration per 5 seconds" + "<br>" + "Unique – Mana Charge: Each time you cast a spell or spend mana, your maximum mana increases by 4 (3 second cooldown). Bonus caps at +750 bonus mana." + "<html>");
+		
+		jbtTearOfTheGoddess.setToolTipText("<html>" +  "700g" + "<br>"+ "Tear of the Goddess" + "<br>" + "+250 Mana"+ "<br>" + "+7 Mana Regeneration per 5 seconds" + "<br>" + 
+				"Unique – Mana Charge: Each time you cast a spell or spend mana, your maximum mana increases by 4 (3 second cooldown). Bonus caps at +750 bonus mana." + "<html>");
+		
 		jbtTheBlackCleaver.setToolTipText("<html>" +  "3000g" + "<br>"+ "The Black Cleaver" + "<br>" + "+250 Health"+ "<br>" + "+50 Attack Damage" + "<br>" + "+10% Cooldown Reduction" + "<br>" + "Unique: +10 Armor Penetration"
 				+ "<br>" + "Dealing physical damage to an enemy champion reduces their armor by 6.25% for 4 seconds. This effect stacks up to 4 times." + "<html>");
+		
 		jbtTheBloodthirster.setToolTipText("<html>" +  "3000g" + "<br>"+ "The Bloodthirster" + "<br>" + "+70 Damage"+ "<br>" + "+12% Life Steal" + "<br>" + "Passive: Gains 1 stack per kill up to a maximum of 30. Each stack " +
 				"grants +1 attack damage and 0.2% Life Steal. (max: +30 Attack Damage and +6% Life Steal). Half of the current stacks are lost upon death." + "<html>");
+		
 		jbtTheBrutilizer.setToolTipText("<html>" +  "1337g" + "<br>"+ "The Brutalizer" + "<br>" + "+25 Attack Damage"+ "<br>" + "Unique: +10% Cooldown Reduction" + "<br>" + "Unique: +10 Armor Penetration" + "<html>");
+		
 		jbtTheHexCore.setToolTipText("<html>" +  "0g" + "<br>"+ "The Hex Core" + "<br>" + "+3 Ability Power per Level" + "<html>");
-		jbtThornmail.setToolTipText("<html>" +  "2200g" + "<br>"+ "Thornmail" + "<br>" + "+100 Armor"+ "<br>" + "Unique: On being hit by basic attacks, returns 30% of damage, before any reductions such as armor, as magic damage. At least 15 damage must be received." + "<html>");
+		
+		jbtThornmail.setToolTipText("<html>" +  "2200g" + "<br>"+ "Thornmail" + "<br>" + "+100 Armor"+ "<br>" + "Unique: On being hit by basic attacks, returns 30% of damage," +
+				" before any reductions such as armor, as magic damage. At least 15 damage must be received." + "<html>");
+		
 		jbtTiamat.setToolTipText("<html>" +  "2300g" + "<br>"+ "Tiamat" + "<br>" + "+50 Attack Damage"+ "<br>" + "+15 Health Regen per 5" + "<br>"+ "Unique - Cleave (Melee Only): Your attacks deal physical damage up to 60% of " +
 				"your Attack Damage to units around your target, decaying to 20% near the edge." +  "<br>" + "Unique - Crescent (Melee Only): Your attacks deal physical damage" +
 						" up to 100% of your Attack Damage to units around your target, decaying to 60% near the edge. (10 second cooldown)" + "<html>");
+		
 		jbtTrinityForce.setToolTipText("<html>" +  "4200g" + "<br>"+ "Trinity Force" + "<br>" + "+30 Ability Power"+ "<br>" + "+30 Attack Damage" + "<br>" + "+30% Attack Speed" + "<br>" + "+10% Critical Stike Chance" + "<br>" +
 				"+250 Health" + "<br>" + "+200 Mana" + "<br>" + "+8% Movement Speed" + "<br>" + "Unique Passive - Icy: Your basic attacks have a 25% chance to slow your target's movement" +
 						"speed by 30% for 2 seconds (20% for ranged attacks)" + "<br>" + "Unique Passive - SpellBlade: After using an ability, your next basic attack deals bonus damage equal" +
 								"to 150% of your base attack damage as physical damage. (2 second cooldown)." + "<html>");
+		
 		jbtTwinShadows.setToolTipText("<html>" +  "1900g" + "<br>"+ "Twin Shadows" + "<br>" + "+40 Ability Power" + "<br>" + "+40 Magic Resistance" + "<br>" + "+6% Movement Speed" + "<br>"
-								+ "Unique Active: Hunt - Summons 2 invulnerable ghosts for 6 seconds to seek the two nearest enemy champions. If they touch an enemy champion, they slow their movement speed by 40% and reveal them for 2.5 seconds. 120 second cooldown." + "<html>");
+								+ "Unique Active: Hunt - Summons 2 invulnerable ghosts for 6 seconds to seek the two nearest enemy champions. If they touch an enemy champion," +
+								" they slow their movement speed by 40% and reveal them for 2.5 seconds. 120 second cooldown." + "<html>");
+		
 		jbtVampiricScepter.setToolTipText("<html>" +  "800g" + "<br>"+ "Vampiric Scepter" + "<br>" + "+10 Attack Damage" + "<br>" + "+10% Life Steal" + "<html>");
+		
 		jbtVisionWard.setToolTipText("<html>" +  "125g" + "<br>"+ "Vision Ward" + "<br>" + "Places an invisible ward with 1000 range Magical Sight (can see invisible units). Lasts 3 minutes." + "<html>");
+		
 		jbtVoidStaff.setToolTipText("<html>" +  "2295g" + "<br>"+ "Void Staff" + "<br>" + "+70 Ability Power" + "<br>" + "+Unique: +35% magic penetration" + "<html>");
+		
 		jbtWardensMail.setToolTipText("<html>" +  "1100g" + "<br>"+ "Warden's Mail" + "<br>" + "+50 Armor" + "<br>" + "Unique – Cold Steel: If you are hit by a basic attack, you slow the attacker's attack speed by 20% for 2 seconds." + "<html>");
-		jbtWarmogsArmor.setToolTipText("<html>" +  "2650g" + "<br>"+ "Warmog's Armor" + "<br>" + "+1000 Health" + "<br>" + "Unique Passive: You gain health regeneration equal to 1.5% of your maximum health." + "<html>");
+		
+		jbtWarmogsArmor.setToolTipText("<html>" +  "2650g" + "<br>"+ "Warmog's Armor" + "<br>" + "+1000 Health" + "<br>" + "Unique Passive: You gain health regeneration equal to 1% of your maximum health." + "<html>");
+		
 		jbtWillOfTheAncients.setToolTipText("<html>" +  "2550g" + "<br>"+ "Will of the Ancients" + "<br>" + "+50 Ability Power" + "<br>" + "Unique: Nearby allied champions gain +30 ability power and +20% spell vamp. " + "<html>");
+		
 		jbtWitsEnd.setToolTipText("<html>" + "2200g" + "<br>"+ "Wit's End" + "<br>" + "+40% Attack Speed" + "<br>" + "+20 Magic Resistance" + "<br>" + "Unique: Your basic attacks deal 42 bonus magic damage. " 
 				+ "<br>" + "Unique: Your basic attacks increase your magic resistance by 5 for 5 seconds (maximum 4 stacks)." + "<html>");
+		
 		jbtWrigglesLantern.setToolTipText("<html>" +  "1600g" + "<br>"+ "Wriggle's Lantern" + "<br>" + "+30 Armor" + "<br>" + "+15 Attack Damage" + "<br>" + "+10% Life Steal" + "<br>" + "Unique Passive - Maim: Your basic attacks against minions " +
 				"and monsters have a 25% chance to deal 500 additional magic damage." + "<br>" + "Places a Sight Ward at target location. 3 minute cooldown. " + "<html>");
+		
 		jbtYoumuusGhostBlade.setToolTipText("<html>" +  "2700g" + "<br>"+ "Youmuu's Ghostblade" + "<br>" + "+30 Attack Damage"+ "<br>" + "+15% Critical Strike Chance" + 
 				"<br>" + "+10% Cooldown Reduction" + "<br>" + "Unique: +20 armor penetration" + "<br>" + "Unique: Gain +40% attack speed and +20% movement speed for 6 seconds (4 seconds for ranged champions) - 45 second cooldown." + "<html>");
+		
 		jbtZeal.setToolTipText("<html>" +  "1175g" + "<br>"+ "Zeal" + "<br>" + "+18% Attack Speed"+ "<br>" + "+10% Critical Strike Chance" + 
 				"<br>" + "+5% Movement Speed" + "<html>");
+		
 		jbtZekesHerald.setToolTipText("<html>" +  "2450g" + "<br>"+ "Zeke's Herald" + "<br>" + "+250 Health"+ "<br>" + "+15% Cooldown Reduction" + 
 				"<br>" + "Unique: Nearby allied champions gain +20 attack damage and +10% life steal. " + "<html>");
-		jbtZephyr.setToolTipText("<html>" + "2850g" + "<br>" + "Zephyr" + "<br>" + "+20 Attack Damage"+ "<br>" + "+50% Attack Speed" + "<br>" + "+10% Movement Speed" + "<br>" + "+10% Cooldown Reduction" + "<br>" + "Unique Passive - Tenacity: The duration of stuns, slows, taunts, fears, silences, blinds and immobilizes are reduced by 35%." + "<html>");
+		
+		jbtZephyr.setToolTipText("<html>" + "2850g" + "<br>" + "Zephyr" + "<br>" + "+20 Attack Damage"+ "<br>" + "+50% Attack Speed" + "<br>" + "+10% Movement Speed" +
+				"<br>" + "+10% Cooldown Reduction" + "<br>" + "Unique Passive - Tenacity: The duration of stuns, slows, taunts, fears, silences, blinds and immobilizes are reduced by 35%." + "<html>");
+		
 		jbtZhonyasHourglass.setToolTipText("<html>" +  "3100g" + "<br>"+ "Zhonya's Hourglass" + "<br>" + "+100 Ability Power"+ "<br>" + "+50 Armor" + "<br>" + "Unique: Places your champion into stasis for 2.5 seconds," +
 				" rendering you invulnerable and untargetable but unable to take any actions. 90 second cooldown." + "<html>");
 	}

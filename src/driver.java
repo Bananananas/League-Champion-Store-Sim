@@ -17,7 +17,7 @@ public class driver {
 		theLDCChampionView.setModel(theLDCModel);
 		theLDCController.setChampView(theLDCChampionView);
 		theLDCController.setView(theLDCView);		
-		
+		theLDCChampionView.setToolTips();
 	}
 }
 
